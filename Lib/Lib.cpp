@@ -6,6 +6,8 @@
 
 namespace Lib
 {
+    // File
+
     fs::path GetRootDirectory()
     {
         fs::path buildDirectory = fs::current_path();
@@ -31,5 +33,20 @@ namespace Lib
         file.close();
 
         return content;
+    }
+
+    // Time
+
+    ScopeTimer::ScopeTimer()
+    {
+        m_StartTime = std::chrono::high_resolution_clock::now();
+    }
+
+    ScopeTimer::~ScopeTimer()
+    {
+        auto endTime = std::chrono::high_resolution_clock::now();
+        auto duration = endTime - m_StartTime;
+
+        std::cout << "Timer: " << duration.count() << "ms\n";
     }
 }
