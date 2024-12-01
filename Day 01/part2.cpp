@@ -3,7 +3,7 @@
 #include <vector>
 #include <algorithm>
 
-#include "Lib.h"
+#include "Lib.hpp"
 
 int Solve(const std::string& input)
 {
@@ -43,6 +43,5 @@ int main()
     std::string input = Lib::LoadFile("input.txt");
     std::cout << "Solution for Part 2: " << Solve(input) << '\n';
 
-    Lib::Timer timer(std::bind(Solve, input));
-    std::cout << "Average time for 10.000 runs: " << timer.AverageTime(10000) << '\n';
+    std::cout << "Average time for 10.000 runs: " << Lib::AverageTime(std::bind(Solve, input), 10000) << '\n';
 }

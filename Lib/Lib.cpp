@@ -1,4 +1,4 @@
-#include "Lib.h"
+#include "Lib.hpp"
 
 #include <fstream>
 #include <stdexcept>
@@ -38,14 +38,14 @@ namespace Lib
 
     // Timer
 
-    std::chrono::duration<double, std::milli> Timer::AverageTime(int numberOfRuns)
+    std::chrono::duration<double, std::milli> AverageTime(std::function<void()> function, int numberOfRuns)
     {
         std::chrono::duration<double, std::milli> sumOfTimes;
 
         for (int i = 0; i < numberOfRuns; i++)
         {
             auto start = std::chrono::high_resolution_clock::now();
-            m_Function();
+            function();
             auto end = std::chrono::high_resolution_clock::now();
 
             sumOfTimes += end - start;
