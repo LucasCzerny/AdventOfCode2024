@@ -51,5 +51,5 @@ Each Day xx folder consists of the following files:
 
 There is also a `Lib` folder at the root of the repository with utility functions like ReadFile() and AverageTime() for timing.
 
-Note that I'm using std::chrono::high_resolution_clock, which, despite it's name, is not very accurate (it's dependent on the implementation). It is also going to vary due to interrupts and task switches.
-For the first couple of days where the execution time is <1ms, the timer isn't that useful. However, I think it's still going to be a nice estimate for the later days.
+Note that I'm using std::chrono::high_resolution_clock, which, despite it's name, is not very accurate (it usually just uses the system clock, but it depends on the implementation). It is also going to vary due to interrupts and task switches.
+For the first couple of days where the execution time is < 1ms, the timer isn't that useful. However, I think it's still going to be a nice estimate for the later days.
