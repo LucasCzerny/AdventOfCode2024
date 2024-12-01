@@ -49,7 +49,7 @@ Each Day xx folder consists of the following files:
 - `input.txt`: The input I received
 - `CMakeLists.txt`: The CMake build instructions
 
-There is also a `Lib` folder at the root of the repository with utility functions like ReadFile() and AverageTime() for timing.
+There is also a `Lib` folder at the root of the repository with utility functions like `ReadFile()` and `AverageTime()` for timing.
 
 Note that I'm using `std::chrono::high_resolution_clock`, which, despite it's name, is not very accurate (it usually just uses the system clock, but it depends on the implementation).
 It's also going to vary due to interrupts and task switches.
