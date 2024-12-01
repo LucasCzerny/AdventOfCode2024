@@ -18,6 +18,7 @@ namespace Lib
 
     std::string LoadFile(const fs::path& path)
     {
+        std::cout << GetRootDirectory() << '\n';
         std::ifstream file(GetRootDirectory() / path, std::ios::ate);
 
         if (!file.is_open())
@@ -45,7 +46,7 @@ namespace Lib
     ScopeTimer::~ScopeTimer()
     {
         auto endTime = std::chrono::high_resolution_clock::now();
-        auto duration = endTime - m_StartTime;
+        std::chrono::duration<double, std::milli> duration = endTime - m_StartTime;
 
         std::cout << "Timer: " << duration.count() << "ms\n";
     }

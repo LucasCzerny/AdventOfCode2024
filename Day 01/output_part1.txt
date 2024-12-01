@@ -1,0 +1,2 @@
+Solution for Part 1: 1222801
+Timer: 0.219048ms
