@@ -5,31 +5,44 @@
 
 #include "Lib.h"
 
-int main()
+int Solve(const std::string& input)
 {
-    std::string input = Lib::LoadFile("input.txt");
-
-    // This will print the time once the timer goes out of scope
-    Lib::ScopeTimer timer;
-
     std::vector<int> leftNumbers, rightNumbers;
+    leftNumbers.reserve(1000);
+    rightNumbers.reserve(1000);
 
     std::istringstream stream(input);
     std::string line;
     while (std::getline(stream, line))
     {
+        std::istringstream lineStream(line);
         int left, right;
-        std::sscanf(line.c_str(), "%d  %d", &left, &right);
+        lineStream >> left >> right;
 
         leftNumbers.push_back(left);
         rightNumbers.push_back(right);
     }
 
+    std::unordered_map<int, int> rightCounts;
+    for (int right : rightNumbers)
+    {
+        rightCounts[right]++;
+    }
+
     int sum = 0;
     for (int left : leftNumbers)
     {
-        sum += left * std::count(rightNumbers.begin(), rightNumbers.end(), left);
+        sum += left * rightCounts[left];
     }
-    
-    std::cout << "Solution for Part 2: " << sum << "\n";
+
+    return sum;
+}
+
+int main()
+{
+    std::string input = Lib::LoadFile("input.txt");
+    std::cout << "Solution for Part 2: " << Solve(input) << '\n';
+
+    Lib::Timer timer(std::bind(Solve, input));
+    std::cout << "Average time for 10.000 runs: " << timer.AverageTime(10000) << '\n';
 }

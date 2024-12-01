@@ -6,7 +6,7 @@
 
 namespace Lib
 {
-    // File
+    // File operations
 
     fs::path GetRootDirectory()
     {
@@ -36,18 +36,21 @@ namespace Lib
         return content;
     }
 
-    // Time
+    // Timer
 
-    ScopeTimer::ScopeTimer()
+    std::chrono::duration<double, std::milli> Timer::AverageTime(int numberOfRuns)
     {
-        m_StartTime = std::chrono::high_resolution_clock::now();
-    }
+        std::chrono::duration<double, std::milli> sumOfTimes;
 
-    ScopeTimer::~ScopeTimer()
-    {
-        auto endTime = std::chrono::high_resolution_clock::now();
-        std::chrono::duration<double, std::milli> duration = endTime - m_StartTime;
+        for (int i = 0; i < numberOfRuns; i++)
+        {
+            auto start = std::chrono::high_resolution_clock::now();
+            m_Function();
+            auto end = std::chrono::high_resolution_clock::now();
 
-        std::cout << "Timer: " << duration.count() << "ms\n";
+            sumOfTimes += end - start;
+        }
+
+        return sumOfTimes / numberOfRuns;
     }
 }

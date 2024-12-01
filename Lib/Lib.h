@@ -4,20 +4,23 @@
 namespace fs = std::filesystem;
 
 #include <chrono>
+#include <functional>
 
 namespace Lib
 {
-    // File
+    // File operations
     std::string LoadFile(const fs::path& path);
 
     // Timer
-    struct ScopeTimer
+    class Timer
     {
     public:
-        ScopeTimer();
-        ~ScopeTimer();
+        Timer(std::function<void()> function)
+            : m_Function(function) {}
+
+        std::chrono::duration<double, std::milli> AverageTime(int numberOfRuns);
 
     private:
-        std::chrono::_V2::system_clock::time_point m_StartTime;
+        std::function<void()> m_Function;
     };
 }

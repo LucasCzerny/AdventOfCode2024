@@ -1,2 +1,2 @@
 Solution for Part 2: 22545250
-Timer: 0.424062ms
+Average time for 10.000 runs: 0.327469ms

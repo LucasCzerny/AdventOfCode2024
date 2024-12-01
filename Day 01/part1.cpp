@@ -2,24 +2,23 @@
 #include <sstream>
 #include <vector>
 #include <algorithm>
+#include <numeric>
 
 #include "Lib.h"
 
-int main()
+int Solve(const std::string& input)
 {
-    std::string input = Lib::LoadFile("input.txt");
-
-    // This will print the time once the timer goes out of scope
-    Lib::ScopeTimer timer;
-
     std::vector<int> leftNumbers, rightNumbers;
+    leftNumbers.reserve(1000);
+    rightNumbers.reserve(1000);
 
     std::istringstream stream(input);
     std::string line;
     while (std::getline(stream, line))
     {
+        std::istringstream lineStream(line);
         int left, right;
-        std::sscanf(line.c_str(), "%d  %d", &left, &right);
+        lineStream >> left >> right;
 
         leftNumbers.push_back(left);
         rightNumbers.push_back(right);
@@ -28,11 +27,24 @@ int main()
     std::sort(leftNumbers.begin(), leftNumbers.end());
     std::sort(rightNumbers.begin(), rightNumbers.end());
 
-    int sum = 0;
-    for (int i = 0; i < leftNumbers.size(); i++)
-    {
-        sum += std::abs(leftNumbers[i] - rightNumbers[i]);
-    }
-    
-    std::cout << "Solution for Part 1: " << sum << "\n";
+    int sum = std::inner_product(
+        leftNumbers.begin(), leftNumbers.end(),
+        rightNumbers.begin(),
+        0, std::plus<int>(),
+        [](int a, int b)
+        {
+            return std::abs(a - b);
+        }
+    );
+
+    return sum;
+}
+
+int main()
+{
+    std::string input = Lib::LoadFile("input.txt");
+    std::cout << "Solution for Part 1: " << Solve(input) << '\n';
+
+    Lib::Timer timer(std::bind(Solve, input));
+    std::cout << "Average time for 10.000 runs: " << timer.AverageTime(10000) << '\n';
 }
