@@ -1,28 +1,25 @@
 #include <iostream>
 #include <sstream>
 
-#include "Lib.hpp"
+#include "lib.hpp"
 
-int Solve(const std::string& input)
-{
-    int safeReports = 0;
+int solve(const std::string& input) {
+    int safe_reports = 0;
 
-    std::istringstream inputStream(input);
+    std::istringstream input_stream(input);
 
     std::string line;
-    while (std::getline(inputStream, line))
-    {
-        std::istringstream lineStream(line);
+    while (std::getline(input_stream, line)) {
+        std::istringstream line_stream(line);
 
         int previous, current;
-        lineStream >> previous >> current;
+        line_stream >> previous >> current;
         bool decreasing = previous > current;
 
-        bool endOfLine = false;
-        while (!endOfLine) 
-        {
+        bool end_of_line = false;
+        while (!end_of_line) {
             int difference = previous - current;
-            int absDifference = std::abs(difference);
+            int abs_difference = std::abs(difference);
 
             // if it's decreasing, then the difference should be > 0
             // if !decreasing, then the difference is < 0
@@ -36,28 +33,25 @@ int Solve(const std::string& input)
             // true  | false true
             // false | true  false
 
-            if (decreasing != (difference > 0) || absDifference < 1 || absDifference > 3)
-            {
+            if (decreasing != (difference > 0) || abs_difference < 1 || abs_difference > 3) {
                 break;
             }
 
             previous = current;
-            endOfLine = !(lineStream >> current);
+            end_of_line = !(line_stream >> current);
         }
 
-        if (endOfLine)
-        {
-            safeReports++;
+        if (end_of_line) {
+            safe_reports++;
         }
     }
 
-    return safeReports;
+    return safe_reports;
 }
 
-int main()
-{
-    std::string input = Lib::LoadFile("input.txt");
-    std::cout << "Solution for Part 1: " << Solve(input) << '\n';
+int main() {
+    std::string input = lib::load_file("input.txt");
+    std::cout << "Solution for part 1: " << solve(input) << '\n';
 
-    std::cout << "Average time for 10.000 runs: " << Lib::AverageTime(std::bind(Solve, input), 10000) << '\n';
+    std::cout << "Average time for 10.000 runs: " << lib::average_time(std::bind(solve, input), 10000) << '\n';
 }

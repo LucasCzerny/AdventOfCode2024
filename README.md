@@ -2,8 +2,8 @@
 
 |                                              | Part 1 Solution                                                           | Part 2 Solution                                                           | Input                           |
 |:---------------------------------------------|:--------------------------------------------------------------------------|:--------------------------------------------------------------------------|:--------------------------------|
-| [Day 01](https://adventofcode.com/2024/day/1) | [part1.cpp](Day%2001/part1.cpp) - [0.243086ms](Day%2001/output_part1.txt) | [part2.cpp](Day%2001/part2.cpp) - [0.327469ms](Day%2001/output_part2.txt) | [input.txt](Day%2001/input.txt) |
-| [Day 02](https://adventofcode.com/2024/day/2) | [part1.cpp](Day%2002/part1.cpp) - [0.351729ms](Day%2002/output_part1.txt) | [part2.cpp](Day%2002/part2.cpp) - [0.894735ms](Day%2002/output_part2.txt) | [input.txt](Day%2002/input.txt) |
+| [Day 01](https://adventofcode.com/2024/day/1) | [part1.cpp](Day%2001/part1.cpp) - [0.253929ms](Day%2001/output_part1.txt) | [part2.cpp](Day%2001/part2.cpp) - [0.338325ms](Day%2001/output_part2.txt) | [input.txt](Day%2001/input.txt) |
+| [Day 02](https://adventofcode.com/2024/day/2) | [part1.cpp](Day%2002/part1.cpp) - [0.272486ms](Day%2002/output_part1.txt) | [part2.cpp](Day%2002/part2.cpp) - [0.445645ms](Day%2002/output_part2.txt) | [input.txt](Day%2002/input.txt) |
 
 &nbsp;
 

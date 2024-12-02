@@ -1,2 +1,2 @@
-Solution for Part 1: 1222801
-Average time for 10.000 runs: 0.243086ms
+Solution for part 1: 1222801
+Average time for 10.000 runs: 0.253929ms
