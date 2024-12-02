@@ -22,7 +22,7 @@ cmake -DCMAKE_BUILD_TYPE=Release ..
 make
 ```
 
-Then, run the executables with:
+Then, run them with:
 
 ```bash
 ./Part1
