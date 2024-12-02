@@ -1,6 +1,6 @@
 # Advent of Code 2024 in C++
 
-My happiness with each solution from 1-5:
+My happiness levels for each solution from 1-5:
 🤨😐🙂😀😄
 
 |                                              | Part 1 Solution                                                                 | Part 2 Solution                                                               | Input                           |
