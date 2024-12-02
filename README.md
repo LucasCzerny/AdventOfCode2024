@@ -6,9 +6,7 @@
 
 &nbsp;
 
-```
-       .--'~ ~ ~|        .-' *       \\  /     '-.   1 **
-```
+![Advent of Code 2024 Art](art.png)
 
 ## How to run
 
