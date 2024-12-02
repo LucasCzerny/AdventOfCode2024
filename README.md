@@ -7,7 +7,7 @@
 
 &nbsp;
 
-![Advent of Code 2024 Art](art.png)
+![Advent of Code 2024 Art](art2.png)
 
 ## How to run
 
