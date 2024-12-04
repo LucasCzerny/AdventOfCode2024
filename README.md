@@ -58,7 +58,6 @@ Each Day xx folder consists of the following files:
 
   OR `sample_input_part[1,2].txt` if there are multiple sample inputs given
   
-- `input.txt`: The input I received
 - `CMakeLists.txt`: The CMake build instructions
 
 There is also a `lib` folder at the root of the repository with utility functions like `read_file()` and `average_time()` for timing.
