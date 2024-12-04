@@ -1,5 +1,6 @@
 #include <iostream>
 #include <regex>
+#include <print>
 
 #include "lib.hpp"
 
@@ -13,7 +14,6 @@ int solve(const std::string& input) {
 
     for (int row = 0; row < rows; row++) {
         for (int column = 0; column < columns; column++) {
-
             if (grid[row][column] != 'X') continue;
 
             static constexpr const char* word = "XMAS";
@@ -50,5 +50,5 @@ int main() {
     const std::string input = lib::load_file("input.txt");
     std::cout << "Solution for part 1: " << solve(input) << '\n';
 
-    std::cout << "Average time for 10.000 runs: " << lib::average_time(std::bind(solve, input), 10000) << '\n';
+    std::println("Average time for 10.000 runs: ", lib::average_time(std::bind(solve, input), 10000));
 }

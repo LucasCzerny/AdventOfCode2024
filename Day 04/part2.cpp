@@ -13,7 +13,6 @@ int solve(const std::string& input) {
 
     for (int row = 1; row < rows -1; row++) {
         for (int column = 1; column < columns - 1; column++) {
-
             if (grid[row][column] != 'A') continue;
 
             const char top_left = grid[row - 1][column - 1];
