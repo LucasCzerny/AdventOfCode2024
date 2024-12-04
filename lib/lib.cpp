@@ -33,6 +33,20 @@ namespace lib {
         return content;
     }
 
+    std::vector<std::string> load_lines(const fs::path& path) {
+        std::string content = load_file(path);
+        std::vector<std::string> result;
+
+        std::istringstream content_stream(content);
+
+        std::string line;
+        while (std::getline(content_stream, line)) {
+            result.push_back(line);
+        }
+
+        return result;
+    }
+
     // Timer
 
     std::chrono::duration<double, std::milli> average_time(std::function<void()> function, int number_of_runs) {
