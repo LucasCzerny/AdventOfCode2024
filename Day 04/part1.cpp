@@ -1,5 +1,4 @@
 #include <iostream>
-#include <regex>
 
 #include "lib.hpp"
 
@@ -20,7 +19,7 @@ int solve(const std::string& input) {
             for (int y_dir = -1; y_dir <= 1; y_dir++) {
                 for (int x_dir = -1; x_dir <= 1; x_dir++) {
 
-                    int i = 1;
+                    int i;
                     for (i = 1; i < 4; i++) {
                         int c = column + i * x_dir;
                         int r = row + i * y_dir;
