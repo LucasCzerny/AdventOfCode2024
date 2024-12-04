@@ -15,7 +15,7 @@ My happiness levels for each solution from 1-5: &nbsp; 🤨 😐 🙂 😀 😄
 
 ## How to run
 
-*NOTE:* I am using C++20 with gcc version 15.0.0 ([built from source](https://gcc.gnu.org/install/index.html)). It might not compile on older compilers.
+*NOTE:* I am using C++20 with gcc version 15.0.0 ([built from source](https://gcc.gnu.org/install/index.html)). It might not compile on other compilers.
 
 ### cmake
 
