@@ -44,8 +44,8 @@ int solve(const std::string& input) {
         const std::string match_str = match.str();
 
         if (match_str.find("mul") == 0 && enabled) {
-            int first = std::stoi(match[1].str());
-            int second = std::stoi(match[2].str());
+            const int first = std::stoi(match[1].str());
+            const int second = std::stoi(match[2].str());
             sum += first * second;
         } else if (match_str == "do()") {
             enabled = true;
@@ -60,8 +60,8 @@ int solve(const std::string& input) {
 }
 
 int main() {
-    std::string input = lib::load_file("input.txt");
+    const std::string input = lib::load_file("input.txt");
     std::cout << "Solution for part 2: " << solve(input) << '\n';
 
-    std::cout << "Average time for 10.000 runs: " << lib::average_time(std::bind(solve, input), 10000).count() << '\n';
+    std::cout << "Average time for 10.000 runs: " << lib::average_time(std::bind(solve, input), 10000) << '\n';
 }

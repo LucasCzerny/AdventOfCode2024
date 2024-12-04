@@ -6,13 +6,16 @@ My happiness levels for each solution from 1-5: &nbsp; 🤨 😐 🙂 😀 😄
 |:----------------------------------------------|:-------------------------------------------------------------------------------|:-------------------------------------------------------------------------------|:--------------------------------|
 | [Day 01](https://adventofcode.com/2024/day/1) | [part1.cpp](Day%2001/part1.cpp) - [0.253929ms](Day%2001/output_part1.txt) - 😄 | [part2.cpp](Day%2001/part2.cpp) - [0.338325ms](Day%2001/output_part2.txt) - 😄 | [input.txt](Day%2001/input.txt) |
 | [Day 02](https://adventofcode.com/2024/day/2) | [part1.cpp](Day%2002/part1.cpp) - [0.272486ms](Day%2002/output_part1.txt) - 😄 | [part2.cpp](Day%2002/part2.cpp) - [0.445645ms](Day%2002/output_part2.txt) - 😀 | [input.txt](Day%2002/input.txt) |
-| [Day 03](https://adventofcode.com/2024/day/3) | [part1.cpp](Day%2003/part1.cpp) - [0.342503ms](Day%2003/output_part1.txt) - 😄 | [part2.cpp](Day%2003/part2.cpp) - [1.83294ms](Day%2003/output_part2.txt) - 😀  | [input.txt](Day%2003/input.txt) |
+| [Day 03](https://adventofcode.com/2024/day/3) | [part1.cpp](Day%2003/part1.cpp) - [0.342503ms](Day%2003/output_part1.txt) - 😄 | [part2.cpp](Day%2003/part2.cpp) - [0.906545ms](Day%2003/output_part2.txt) - 😀  | [input.txt](Day%2003/input.txt) |
+| [Day 04](https://adventofcode.com/2024/day/4) | [part1.cpp](Day%2004/part1.cpp) - [0.227310ms](Day%2004/output_part1.txt) - 😄 | [part2.cpp](Day%2004/part2.cpp) - [0.053494ms](Day%2004/output_part2.txt) - 😄  | [input.txt](Day%2004/input.txt) |
 
 &nbsp;
 
-![Advent of Code 2024 Art](art3.png)
+![Advent of Code 2024 Art](art4.png)
 
 ## How to run
+
+*NOTE:* I am using C++20 with gcc version 15.0.0 ([built from source](https://gcc.gnu.org/install/index.html)). It might not compile on older compilers.
 
 ### cmake
 
@@ -49,15 +52,14 @@ or
 ## Notes
 
 Each Day xx folder consists of the following files:
-- `part1.cpp`: The code for the first part
-- `part2.cpp`: The code for the second part
-- `output_part1.txt`: The output for the first part
-- `output_part2.txt`: The output for the second part
+- `part[1,2].cpp`: The code for each part
+- `output_part[1,2].txt`: The output for the each part
 - `sample_input.txt`: The sample input given in the task description
+- OR `sample_input_part[1,2].txt` if there are multiple sample inputs given
 - `input.txt`: The input I received
 - `CMakeLists.txt`: The CMake build instructions
 
-There is also a `Lib` folder at the root of the repository with utility functions like `ReadFile()` and `AverageTime()` for timing.
+There is also a `lib` folder at the root of the repository with utility functions like `read_file()` and `average_time()` for timing.
 
 Note that I'm using `std::chrono::high_resolution_clock`, which, despite it's name, is not very accurate (it usually just uses the system clock, but it depends on the implementation).
 It's also going to vary due to interrupts and task switches.

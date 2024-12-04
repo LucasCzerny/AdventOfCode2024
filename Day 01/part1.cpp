@@ -26,7 +26,7 @@ int solve(const std::string& input) {
     std::sort(left_numbers.begin(), left_numbers.end());
     std::sort(right_numbers.begin(), right_numbers.end());
 
-    int sum = std::inner_product(
+    const int sum = std::inner_product(
         left_numbers.begin(), left_numbers.end(),
         right_numbers.begin(),
         0, std::plus<int>(),
@@ -39,7 +39,7 @@ int solve(const std::string& input) {
 }
 
 int main() {
-    std::string input = lib::load_file("input.txt");
+    const std::string input = lib::load_file("input.txt");
     std::cout << "Solution for part 1: " << solve(input) << '\n';
 
     std::cout << "Average time for 10.000 runs: " << lib::average_time(std::bind(solve, input), 10000) << '\n';

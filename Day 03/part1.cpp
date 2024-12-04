@@ -27,5 +27,5 @@ int main() {
     const std::string input = lib::load_file("input.txt");
     std::cout << "Solution for part 1: " << solve(input) << '\n';
 
-    std::cout << "Average time for 10.000 runs: " << lib::average_time(std::bind(solve, input), 10000).count() << '\n';
+    std::cout << "Average time for 10.000 runs: " << lib::average_time(std::bind(solve, input), 10000) << '\n';
 }

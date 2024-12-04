@@ -14,12 +14,12 @@ int solve(const std::string& input) {
 
         int previous, current;
         line_stream >> previous >> current;
-        bool decreasing = previous > current;
+        const bool decreasing = previous > current;
 
         bool end_of_line = false;
         while (!end_of_line) {
-            int difference = previous - current;
-            int abs_difference = std::abs(difference);
+            const int difference = previous - current;
+            const int abs_difference = std::abs(difference);
 
             // if it's decreasing, then the difference should be > 0
             // if !decreasing, then the difference is < 0
@@ -50,7 +50,7 @@ int solve(const std::string& input) {
 }
 
 int main() {
-    std::string input = lib::load_file("input.txt");
+    const std::string input = lib::load_file("input.txt");
     std::cout << "Solution for part 1: " << solve(input) << '\n';
 
     std::cout << "Average time for 10.000 runs: " << lib::average_time(std::bind(solve, input), 10000) << '\n';
