@@ -55,7 +55,9 @@ Each Day xx folder consists of the following files:
 - `part[1,2].cpp`: The code for each part
 - `output_part[1,2].txt`: The output for the each part
 - `sample_input.txt`: The sample input given in the task description
-- OR `sample_input_part[1,2].txt` if there are multiple sample inputs given
+
+  OR `sample_input_part[1,2].txt` if there are multiple sample inputs given
+  
 - `input.txt`: The input I received
 - `CMakeLists.txt`: The CMake build instructions
 
