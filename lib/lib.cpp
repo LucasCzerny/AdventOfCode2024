@@ -16,7 +16,6 @@ namespace lib {
     }
 
     std::string load_file(const fs::path& path) {
-        std::cout << get_root_directory() << '\n';
         std::ifstream file(get_root_directory() / path, std::ios::ate);
 
         if (!file.is_open()) {
