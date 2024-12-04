@@ -3,16 +3,18 @@
 
 #include "lib.hpp"
 
-int solve(const std::vector<std::string>& input) {
-    const unsigned int rows = input.size();
-    const unsigned int columns = input[0].size();
+int solve(const std::string& input) {
+    const std::vector<std::string> grid = lib::split_lines(input);
+
+    const unsigned int rows = grid.size();
+    const unsigned int columns = grid[0].size();
 
     int xmas_count = 0;
 
     for (int row = 0; row < rows; row++) {
         for (int column = 0; column < columns; column++) {
 
-            if (input[row][column] != 'X') continue;
+            if (grid[row][column] != 'X') continue;
 
             static constexpr const char* word = "XMAS";
 
@@ -27,7 +29,7 @@ int solve(const std::vector<std::string>& input) {
                         if (c < 0 || c >= columns) break;
                         if (r < 0 || r >= rows) break;
 
-                        if (input[r][c] != word[i]) {
+                        if (grid[r][c] != word[i]) {
                             break;
                         }
                     }
@@ -45,7 +47,7 @@ int solve(const std::vector<std::string>& input) {
 }
 
 int main() {
-    const std::vector<std::string> input = lib::load_lines("input.txt");
+    const std::string input = lib::load_file("input.txt");
     std::cout << "Solution for part 1: " << solve(input) << '\n';
 
     std::cout << "Average time for 10.000 runs: " << lib::average_time(std::bind(solve, input), 10000) << '\n';

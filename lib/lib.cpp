@@ -33,14 +33,13 @@ namespace lib {
         return content;
     }
 
-    std::vector<std::string> load_lines(const fs::path& path) {
-        std::string content = load_file(path);
+    std::vector<std::string> split_lines(const std::string& input) {
         std::vector<std::string> result;
 
-        std::istringstream content_stream(content);
+        std::istringstream input_stream(input);
 
         std::string line;
-        while (std::getline(content_stream, line)) {
+        while (std::getline(input_stream, line)) {
             result.push_back(line);
         }
 
