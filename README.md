@@ -2,16 +2,17 @@
 
 My happiness levels for each solution from 1-5: &nbsp; 🤨 😐 🙂 😀 😄
 
-|                                               | Part 1 Solution                                                                | Part 2 Solution                                                               |
-|:----------------------------------------------|:-------------------------------------------------------------------------------|:------------------------------------------------------------------------------|
-| [Day 01](https://adventofcode.com/2024/day/1) | [part1.cpp](Day%2001/part1.cpp) - [0.253929ms](Day%2001/output_part1.txt) - 😄 | [part2.cpp](Day%2001/part2.cpp) - [0.338325ms](Day%2001/output_part2.txt) - 😄 |
-| [Day 02](https://adventofcode.com/2024/day/2) | [part1.cpp](Day%2002/part1.cpp) - [0.272486ms](Day%2002/output_part1.txt) - 😄 | [part2.cpp](Day%2002/part2.cpp) - [0.445645ms](Day%2002/output_part2.txt) - 😀 |
-| [Day 03](https://adventofcode.com/2024/day/3) | [part1.cpp](Day%2003/part1.cpp) - [0.342503ms](Day%2003/output_part1.txt) - 😄 | [part2.cpp](Day%2003/part2.cpp) - [0.906545ms](Day%2003/output_part2.txt) - 😀 |
-| [Day 04](https://adventofcode.com/2024/day/4) | [part1.cpp](Day%2004/part1.cpp) - [0.239705ms](Day%2004/output_part1.txt) - 😄 | [part2.cpp](Day%2004/part2.cpp) - [0.063468ms](Day%2004/output_part2.txt) - 😄 |
+|                                               | Part 1 Solution                                                                | Part 2 Solution                                                               | Notes                                                                                                                                                          |
+|:----------------------------------------------|:-------------------------------------------------------------------------------|:------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [Day 01](https://adventofcode.com/2024/day/1) | [part1.cpp](Day%2001/part1.cpp) - [0.253929ms](Day%2001/output_part1.txt) - 😄 | [part2.cpp](Day%2001/part2.cpp) - [0.338325ms](Day%2001/output_part2.txt) - 😄 |                                                                                                                                                                |
+| [Day 02](https://adventofcode.com/2024/day/2) | [part1.cpp](Day%2002/part1.cpp) - [0.272486ms](Day%2002/output_part1.txt) - 😄 | [part2.cpp](Day%2002/part2.cpp) - [0.445645ms](Day%2002/output_part2.txt) - 😀 |                                                                                                                                                                |
+| [Day 03](https://adventofcode.com/2024/day/3) | [part1.cpp](Day%2003/part1.cpp) - [0.342503ms](Day%2003/output_part1.txt) - 😄 | [part2.cpp](Day%2003/part2.cpp) - [0.906545ms](Day%2003/output_part2.txt) - 😀 |                                                                                                                                                                |
+| [Day 04](https://adventofcode.com/2024/day/4) | [part1.cpp](Day%2004/part1.cpp) - [0.239705ms](Day%2004/output_part1.txt) - 😄 | [part2.cpp](Day%2004/part2.cpp) - [0.063468ms](Day%2004/output_part2.txt) - 😄 | I tried to do a smart solution for part1, but I got 397 with the smart solution and 400 with the brute force solution. Didn't wanna figure out the remaining 3 |
+| [Day 05](https://adventofcode.com/2024/day/5) | [part1.cpp](Day%2005/part1.cpp) - [1.099130ms](Day%2005/output_part1.txt) - 😄 | [part2.cpp](Day%2005/part2.cpp) - {2.204660ms](Day%2005/output_part2.txt) - 😄 | Wasn't a huge fan of this day; part 2 is kinda scuffed because I'm using Bubble Sort lol                                                                       |
 
 &nbsp;
 
-![Advent of Code 2024 Art](art4.png)
+![Advent of Code 2024 Art](art5.png)
 
 ## How to run
 
