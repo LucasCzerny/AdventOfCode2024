@@ -44,43 +44,26 @@ int solve(const std::string& input) {
     while (std::getline(input_stream, line)) {
         std::vector<int> update = split_line(line);
 
-        size_t middle_index = update.size() / 2 + 1;
+        bool invalid = false;
+        for (size_t i = 0; i < update.size(); i++) {
+            const int current = update.at(i);
 
-        // check backwards for the first half...
-        int i;
-        for (i = 0; i < middle_index; i++) {
-            const int first = update.at(i);
+            for (size_t j = i + 1; j < update.size(); j++) {
+                const int after = update.at(j);
 
-            int j;
-            for (j = 0; j < i; j++) {
-                const int second = update.at(j);
-                if (std::find(successors[second].begin(), successors[second].end(), first) == successors[second].end()) {
-                    break;
-                }
+                auto loc = std::find(successors[current].begin(), successors[current].end(), after);
+                if (loc != successors[current].end()) continue;
+
+                invalid = true;
+                break;
             }
 
-            if (j != i) break;
+            if (invalid) break;
         }
 
-        if (i != middle_index) continue;
-
-        // ... then check forwards for the second half
-        for (i = update.size() - 1; i >= middle_index; i++) {
-            const int first = update.at(i);
-
-            int j;
-            for (j = i + 1; j < update.size(); j++) {
-                const int second = update.at(j);
-                if (std::find(successors[first].begin(), successors[first].end(), second) == successors[first].end()) {
-                    break;
-                }
-            }
-
-            if (j != update.size()) break;
-        }
-
-        if (i == middle_index) {
-            sum += update[middle_index];
+        if (!invalid) {
+            size_t middle_index = update.size() / 2;
+            sum += update.at(middle_index);
         }
     }
 
@@ -88,8 +71,8 @@ int solve(const std::string& input) {
 }
 
 int main() {
-    std::string input = lib::load_file("sample_input.txt");
+    std::string input = lib::load_file("input.txt");
     std::cout << "Solution for part 1: " << solve(input) << '\n';
 
-    // std::cout << "Average time for 10.000 runs: " << lib::average_time(std::bind(solve, input), 10000) << '\n';
+    std::cout << "Average time for 10.000 runs: " << lib::average_time(std::bind(solve, input), 10000) << '\n';
 }
