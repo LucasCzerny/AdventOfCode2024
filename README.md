@@ -9,10 +9,11 @@ My happiness levels for each solution from 1-5: &nbsp; 🤨 😐 🙂 😀 😄
 | [Day 03](https://adventofcode.com/2024/day/3) | [part1.cpp](Day%2003/part1.cpp) - [0.342503ms](Day%2003/output_part1.txt) - 😄 | [part2.cpp](Day%2003/part2.cpp) - [0.906545ms](Day%2003/output_part2.txt) - 😀 |                                                                                          |
 | [Day 04](https://adventofcode.com/2024/day/4) | [part1.cpp](Day%2004/part1.cpp) - [0.239705ms](Day%2004/output_part1.txt) - 😄 | [part2.cpp](Day%2004/part2.cpp) - [0.063468ms](Day%2004/output_part2.txt) - 😄 | Kinda brute force-y but meh                                                              |
 | [Day 05](https://adventofcode.com/2024/day/5) | [part1.cpp](Day%2005/part1.cpp) - [1.099130ms](Day%2005/output_part1.txt) - 🙂 | [part2.cpp](Day%2005/part2.cpp) - [2.204660ms](Day%2005/output_part2.txt) - 🙂 | Wasn't a huge fan of this day; part 2 is kinda scuffed because I'm using Bubble Sort lol |
+| [Day 06](https://adventofcode.com/2024/day/6) | [part1.cpp](Day%2006/part1.cpp) - [0.597761ms](Day%2006/output_part1.txt) - 😀 | [part2.cpp](Day%2006/part2.cpp) - [2504.730ms](Day%2006/output_part2.txt) - 🙂 | We DO NOT talk about day 2, ok                                                           |
 
 &nbsp;
 
-![Advent of Code 2024 Art](art5.png)
+![Advent of Code 2024 Art](art6.png)
 
 ## How to run
 

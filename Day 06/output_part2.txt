@@ -1,0 +1,2 @@
+Solution for part 2: 1482
+Average time for 10 runs: 2504.73ms
