@@ -11,10 +11,11 @@ My happiness levels for each solution from 1-5: &nbsp; 🤨 😐 🙂 😀 😄
 | [Day 05](https://adventofcode.com/2024/day/5) | [part1.cpp](Day%2005/part1.cpp) - [1.099130ms](Day%2005/output_part1.txt) - 🙂 | [part2.cpp](Day%2005/part2.cpp) - [2.204660ms](Day%2005/output_part2.txt) - 🙂 | Wasn't a huge fan of this day; part 2 is kinda scuffed because I'm using Bubble Sort lol        |
 | [Day 06](https://adventofcode.com/2024/day/6) | [part1.cpp](Day%2006/part1.cpp) - [0.597761ms](Day%2006/output_part1.txt) - 😀 | [part2.cpp](Day%2006/part2.cpp) - [2504.730ms](Day%2006/output_part2.txt) - 😐 | Part 2 could def be better, there's no need to start from the starting position every time f.e. |
 | [Day 07](https://adventofcode.com/2024/day/7) | [part1.cpp](Day%2007/part1.cpp) - [0.600864ms](Day%2007/output_part1.txt) - 😀 | [part2.cpp](Day%2007/part2.cpp) - [16.03820ms](Day%2007/output_part2.txt) - 🙂 | Not too bad, not too great                                                                      |
+| [Day 08](https://adventofcode.com/2024/day/8) | [part1.cpp](Day%2008/part1.cpp) - [0.064820ms](Day%2008/output_part1.txt) - 😄 | [part2.cpp](Day%2008/part2.cpp) - [0.179963ms](Day%2008/output_part2.txt) - 😄 | Figured out how to use a custom Position struct with a set instead of std::pair                 |
 
 &nbsp;
 
-![Advent of Code 2024 Art](art7.png)
+![Advent of Code 2024 Art](art8.png)
 
 ## How to run
 
