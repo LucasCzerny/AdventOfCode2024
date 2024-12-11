@@ -13,11 +13,12 @@ My happiness levels for each solution from 1-5: &nbsp; 🤨 😐 🙂 😀 😄
 | [Day 07](https://adventofcode.com/2024/day/7)  | [part1.cpp](Day%2007/part1.cpp) - [0.600864ms](Day%2007/output_part1.txt) - 😀 | [part2.cpp](Day%2007/part2.cpp) - [16.03820ms](Day%2007/output_part2.txt) - 🙂 | Not too bad, could be optimized but [I don't have the time](https://media.tenor.com/pBxKoe4krm0AAAAj/noooo-emote.gif)     |
 | [Day 08](https://adventofcode.com/2024/day/8)  | [part1.cpp](Day%2008/part1.cpp) - [0.064820ms](Day%2008/output_part1.txt) - 😄 | [part2.cpp](Day%2008/part2.cpp) - [0.179963ms](Day%2008/output_part2.txt) - 😄 | Figured out how to use a custom Position struct with a set instead of std::pair                                           |
 | [Day 09](https://adventofcode.com/2024/day/9)  | [part1.cpp](Day%2009/part1.cpp) - [0.109518ms](Day%2009/output_part1.txt) - 😄 | [part2.cpp](Day%2009/part2.cpp) - [1204.123ms](Day%2009/output_part2.txt) - 😐 | tfw when the datatype for the checksum is too small and you spend 30min figuring out why your answer is wrong             |
-| [Day 10](https://adventofcode.com/2024/day/10) | [part1.cpp](Day%2010/part1.cpp) - [1.292020ms](Day%2010/output_part1.txt) - 😄 | [part2.cpp](Day%2010/part2.cpp) - [0.563295ms](Day%2010/output_part2.txt) - 😄 | [Solved part2 before part2](https://www.reddit.com/r/adventofcode/comments/1hauw4v/2024_d10_solved_part_2_before_part_2/) |                                |
+| [Day 10](https://adventofcode.com/2024/day/10) | [part1.cpp](Day%2010/part1.cpp) - [1.292020ms](Day%2010/output_part1.txt) - 😄 | [part2.cpp](Day%2010/part2.cpp) - [0.563295ms](Day%2010/output_part2.txt) - 😄 | [Solved part2 before part2](https://www.reddit.com/r/adventofcode/comments/1hauw4v/2024_d10_solved_part_2_before_part_2/) |
+| [Day 11](https://adventofcode.com/2024/day/11) | [part1.cpp](Day%2011/part1.cpp) - [0.691646ms](Day%2011/output_part1.txt) - 😀 | [part2.cpp](Day%2011/part2.cpp) - [23.68010ms](Day%2011/output_part2.txt) - 😀 | [me rn](https://www.reddit.com/r/adventofcode/comments/1h7v1ys/ill_start_studying_tomorrow_maybe/)                        |
 
 &nbsp;
 
-![Advent of Code 2024 Art](art10.png)
+![Advent of Code 2024 Art](art11.png)
 
 ## How to run
 
