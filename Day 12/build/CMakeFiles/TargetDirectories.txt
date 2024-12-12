@@ -1,0 +1,4 @@
+/home/lucas/Documents/Code/AdventOfCode2024/Day 12/build/CMakeFiles/Part1.dir
+/home/lucas/Documents/Code/AdventOfCode2024/Day 12/build/CMakeFiles/Part2.dir
+/home/lucas/Documents/Code/AdventOfCode2024/Day 12/build/CMakeFiles/edit_cache.dir
+/home/lucas/Documents/Code/AdventOfCode2024/Day 12/build/CMakeFiles/rebuild_cache.dir
